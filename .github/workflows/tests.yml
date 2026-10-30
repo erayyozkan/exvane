@@ -19,6 +19,4 @@ jobs:
           pip install pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run tests
-        # exit code 5 means "no tests collected yet", which is not a failure
-        run: |
-          pytest -q || [ $? -eq 5 ]
+        run: pytest -q
