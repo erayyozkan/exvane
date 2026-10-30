@@ -1,0 +1,47 @@
+# ---- Private work: keep it in a folder named private/ (never committed) ----
+**/private/
+
+# ---- Price and market data (size and vendor terms) ----
+data/
+**/data/
+*.bi5
+*.hcc
+*.hst
+*.parquet
+*.feather
+*.h5
+*.zip
+*.7z
+ticks/
+**/ticks/
+
+# ---- Credentials and account details ----
+.env
+.env.*
+*.key
+*.pem
+secrets*
+**/config/local*
+ib_config*.json
+accounts*.json
+
+# ---- MetaTrader build and tester output ----
+*.ex5
+*.ex4
+Tester/
+*.log
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# ---- Editors and OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
