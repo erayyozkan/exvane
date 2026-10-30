@@ -21,7 +21,7 @@ Most ideas do not survive. That is the point: the platform is built to kill bad 
 |---|---|---|
 | **S1** | One-sided range break on a higher timeframe, limit entry on the pullback, 2R target plus trailing leg | Retired. No edge after real spreads and commission on any of 2,010 configuration x instrument cells |
 | **S3 / DSR** | Donchian stop-and-reverse ensemble (20/40/80/160) with volatility-targeted sizing; zero fitted parameters | Benchmark and signal core for S4 |
-| **S4** | DSR trend plus carry across 41 futures markets, inverse-vol sizing, 15% portfolio vol target | Passed its pre-registered tests (net Sharpe 0.85 full sample). Next: 12-month paper trading on Interactive Brokers |
+| **S4** | DSR trend plus carry across 41 futures markets, inverse-vol sizing, 15% portfolio vol target | Passed its pre-registered tests (net Sharpe 0.85 full sample). Next: deployment on Interactive Brokers |
 | **S5** | Crypto: cross-sectional momentum on perpetuals, intraday and order-flow studies | Daily signal viable; intraday ideas killed by costs; one rare-event idea under test |
 | **Beyond** | Opening-range breaks, London-open breaks, close momentum and other public ideas | Tested; none survives costs over long history |
 
@@ -33,7 +33,7 @@ Most ideas do not survive. That is the point: the platform is built to kill bad 
 4. **Test against costs and nulls.** Real spreads and commissions from day one; every signal is compared with a random-entry null using the same exits.
 5. **Correct for multiple testing.** Every variant is logged in an experiment ledger, and results are judged with the deflated Sharpe ratio.
 6. **Verify independently.** A second implementation, written only from the spec, must reproduce the headline numbers.
-7. **Paper trade, then live.** Live code is tested offline against a fake broker gateway, then run on paper with written stop rules.
+7. **Go live small.** Live code is tested offline against a fake broker gateway, then started at small size with written stop rules.
 
 Details: [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md).
 

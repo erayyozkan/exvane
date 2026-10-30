@@ -2,7 +2,7 @@
 
 Rules: [`S4_preregistration.md`](S4_preregistration.md) (Parts 1-3, Amendments 2 and 3). Code: research scripts in `research/s4/`, live package in `live/s4live/` (no price data).
 
-Live route: futures through Interactive Brokers via Python, account under USD 250k, out-of-sample test = 12 months of live paper trading (broker data from April 2024 onward is not yet in the study).
+Live route: futures through Interactive Brokers via Python, account under USD 250k, broker data from April 2024 onward is not yet in the study.
 
 ## Rules
 
@@ -31,6 +31,6 @@ Independent code review: 5 critical and 7 major issues found and fixed (position
 
 ## Next
 
-1. IB paper account and market data subscriptions (CME, CBOT, NYMEX, COMEX, ICE US, ICE Europe, Eurex, OSE); seed with `update --lookback 700`; run `check`.
-2. Paper trade TC (BLEND tracked) for 12 months. Pass: P&L within 2% of capital of the model, costs within 2x, no unexplained errors. Stop if drawdown exceeds 1.5x the worst backtest since 2000, or costs exceed 3x for 3 months.
-3. Decide live size in October 2027.
+1. IB account and market data subscriptions (CME, CBOT, NYMEX, COMEX, ICE US, ICE Europe, Eurex, OSE); seed with `update --lookback 700`; run `check`.
+2. Run book TC (BLEND tracked alongside) and compare results with the model: P&L within 2% of capital, costs within 2x, no unexplained errors. Stop if drawdown exceeds 1.5x the worst backtest since 2000, or costs exceed 3x for 3 months.
+3. Set position size from the observed tracking and costs.

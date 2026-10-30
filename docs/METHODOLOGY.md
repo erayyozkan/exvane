@@ -27,7 +27,7 @@ The goal is systematic edge discovery and deployment, with statistical validity,
 5. **Ledger.** Every variant is a trial. Results are judged with the deflated Sharpe ratio for the number of trials run.
 6. **Independent re-implementation** from the written spec reproduces the headline numbers.
 7. **Adversarial code review.** Successive review passes, each hunting one bug class (input handling, CSV alignment, stale identifiers, division guards, account-mode behaviour).
-8. **Paper, then live**, with stop rules written in advance.
+8. **Deploy** with stop rules written in advance.
 
 ## Optimisation tiers (when optimisation is justified)
 
@@ -42,5 +42,5 @@ Walk-forward optimisation uses fixed in-sample/out-of-sample windows, and walk-f
 
 - MetaTrader 5 / MQL5 for execution and strategy-tester runs (real ticks).
 - Python harnesses per EA: look-ahead checks, random-walk nulls, sign response to autocorrelated series.
-- Hybrid logger EAs: live and paper runs also write setup, order and result CSVs for research.
+- Hybrid logger EAs: live and tester runs also write setup, order and result CSVs for research.
 - Data: Dukascopy ticks, broker history exported from MT5, daily futures history, Binance public data, Databento CME data (planned).
